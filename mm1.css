@@ -1,0 +1,117 @@
+ 
+.field {
+ 
+  width: 100%;
+  height: 100vh;
+  background: url("./1.1.1.jpg") center/cover no-repeat;
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+  padding: 20px;
+  
+}
+ 
+.player {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(90deg);
+
+}
+
+.player img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ 
+.gk { grid-row: 2; grid-column: 1; margin-bottom: -290%; }
+ 
+.rb  { grid-row: 6; grid-column: 6; }
+.cb1 { grid-row: 6; grid-column: 3; }
+.cb2 { grid-row: 6; grid-column: 5;  margin-left: -200%; margin-bottom: -70%;}
+.lb  { grid-row: 6; grid-column: 2;  margin-bottom:80%; margin-left: -20%;}
+ 
+.cm1 { grid-row: 4; grid-column: 4; margin-bottom: -70%;  }
+.cm2 { grid-row: 4; grid-column: 2; margin-bottom:60%; margin-left: -20%;}
+.cm3 { grid-row: 4; grid-column: 6; }
+ 
+.lw  { grid-row: 2; grid-column: 3; }
+.st  { grid-row: 1; grid-column: 4; margin-bottom: -70%;  }
+.rw  { grid-row: 2; grid-column: 6; }
+
+.rm {     transform: rotate(360deg); width:40%;}
+
+
+
+
+
+
+
+
+ .box-col1{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+    background: #fff;
+    width: 24%;               
+    min-height: 200px;
+    z-index: 1;
+    border-radius: 3px;
+    transition: transform .3s ease;
+}
+ 
+.box-col1 img{
+    width: 100%;        
+    height: auto;          
+    max-height: 250px;       
+}
+
+ 
+.box-col1:hover{
+    transform: scale(1.05);
+}
+
+.box-col1 a{
+    font-size: 20px;
+    color: #009999;
+    font-weight: 500;
+}
+
+ 
+@media only screen and (max-width: 900px){
+    .box-col1{
+        width: 48%;
+    }
+}
+
+ 
+@media only screen and (max-width: 600px){
+    .box-col1{
+        width: 100%;
+    }
+}
+/* Laptop */
+@media (max-width: 1200px) {
+  .field .player { max-width: 100px; }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .field .player { max-width: 80px; }
+  .field { gap: 8px; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .field .player { max-width: 60px; }
+  .field { gap: 5px; }
+}
+
