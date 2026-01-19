@@ -92,7 +92,6 @@ border-radius: 0 4px 4px 0;
 .nav-bottom{
     display: flex;
     align-items: center;
-    
     gap: 20px;
     padding: 8px 20px;
     background: #232f4e;
@@ -102,14 +101,12 @@ border-radius: 0 4px 4px 0;
  .nav-bottom ion-icon{
     width: 30px;
     height: 30px;
-    margin-left: 10px;
 }
  
 .nav-bottom div{
     display: flex;
     align-items: center;
     gap:15px ;
-   
     font-weight:500 ;
 }
 .right-col{
@@ -123,7 +120,7 @@ border-radius: 0 4px 4px 0;
     border-radius: 60%;
 }
 #icon{
-    width: 60px;
+    width: 40px;
     cursor: pointer;
     
 }
@@ -148,7 +145,7 @@ height: 80vh;
  }
 .hrader-slider a{
 position: absolute;
-top: 30%;
+top: 50%;
 z-index: 1;
 padding: 5vh 1vw;
 background:#ffffff8f;
@@ -184,7 +181,6 @@ cursor: pointer;
     justify-content: space-between;
      margin: 20px 25px;
 }
-
  .mobile-user-icon ion-icon{
     width: 40px;
     height: 40px;
@@ -192,26 +188,25 @@ cursor: pointer;
  }
  
  
-.box-col{
+
+ .box-col{
   
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 15px 20px;
     background: #fff;
-   width: 24%;
+    width: 24%;               
     min-height: 200px;
     z-index: 1;
     border-radius: 3px;
-     transition: transform .3s ease;
-  
+    transition: transform .3s ease;
 }
  
-/**/
- .box-col img{
-    max-width: 80%;
-width: 80%;
- height: 250px;
+.box-col img{
+    width: 100%;        
+    height: auto;          
+    height: 250px;       
 }
 
 
@@ -318,9 +313,6 @@ font-weight: 400;
         margin: 15px 0 5px;
         min-width: 300px;
     }
-       
-  
-
     .box-col{
         max-width: 48%;
     }
@@ -371,10 +363,82 @@ font-size: 15px;
     max-width:100%;
     width: 100%;
 }
-
 footer{
     justify-content: center;
     flex-direction: column;
     font-size: 14px;
 }
   }
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+@media (max-width: 900px){
+    .nav-search{
+        order: 7;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .box-col{
+        width: 48%;
+    }
+}
+
+ 
+@media (max-width: 600px){
+    .nav-countery,
+    .nav-language,
+    .div-text{
+        display: none;
+    }
+
+    .mobile-user-icon{
+        display: flex;
+        margin-left: auto;
+    }
+
+    .nav-cart h4{
+        display: none;
+    }
+
+    .nav-cart ion-icon{
+        width: 25px;
+        height: 25px;
+    }
+
+    .nav-bottom{
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+    .box-col{
+        width: 100%;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 10px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 1024px){
+    .box-col{
+        width: 32%;
+    }
+}
+
+ 
+@media (max-width: 600px){
+    .box-col{
+        width: 100%;
+    }
+}
+
+
+[dir="rtl"]{
+    direction: rtl;
+    text-align: right;
+}
